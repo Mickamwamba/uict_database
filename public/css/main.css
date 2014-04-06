@@ -310,6 +310,13 @@ border-top-left-radius: 4px;
     margin-top:-130px;
 }
 
+
+/*for the login page input*/
+.sensitive_info{
+    font-size:18px;
+   
+}
+
 .welcome 
 {
     height:400px;
@@ -371,3 +378,4 @@ border-top-left-radius: 4px;
     margin-left: 100px;
     margin-right: 100px;
 }
+

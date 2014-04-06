@@ -1,7 +1,7 @@
 <?php
-
-
-include('./includes/services/Loader.php');
+/* now it is only require_once in first index.php
+require_once('./includes/services/Loader.php');
+*/
 $loader = new Loader();
 
 try{
@@ -30,7 +30,8 @@ $template = new Template();
 	    $cssFiles = array("bootstrap.min.css","bootstrap-theme.css","style.css","main.css");
 	    
 	    foreach($cssFiles as $file){
-	    echo '<link rel="stylesheet" type="text/css" href="../public/css/'.$file.'" />';	    }
+	    echo '<link rel="stylesheet" type="text/css" href="../public/css/'.$file.'" />';
+	    }
 	    
 	    ?>
 	    
@@ -65,7 +66,9 @@ $template = new Template();
                         <!-- banner -->
                       <!-- header -->
                      <div class="row">
-			<form action="<?php echo URL; ?>includes/controller/home/register" class="form-horizontal u_row" method="post" role="form">
+
+			<form action="<?php echo URL?>home/register" method="post" class="form-horizontal u_row" role="form">
+
 			<div class="col-lg-6 u_row">
 				
 				    

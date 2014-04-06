@@ -10,8 +10,8 @@
 ?>
 <?php
 
-include('./includes/services/Loader.php');
 $loader = new Loader();
+
 
 try{
 $loader->service('Template.php');
@@ -189,4 +189,5 @@ $template = new Template();
 	      </div>
 	</div>
  </body>
- </html>
+
+</html>
