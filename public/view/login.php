@@ -1,3 +1,4 @@
+
 <?php //require_once('../includes/helper/initialize.php');
 
  /* now it is only require_once in first index.php
@@ -9,7 +10,7 @@ require_once('./includes/services/Loader.php');
        
        $loader->service('Template.php');
        $loader->service('CurrentPage.php');
-       $loader->service('functions.php');
+    
        
        
        $template = new Template();
@@ -57,10 +58,15 @@ require_once('./includes/services/Loader.php');
 	 
 	      <h3>Sign in</h3>
 	 </div>    
-     <div class="message">
-	
-     </div>
+     
 	 <div class="ui_form">
+	    <div class="error_message_login">
+	<?php if(isset($data)){
+	       echo $data;
+	       $data="";
+	      }
+	 ?>
+     </div>
      <form name="login" action="<?php echo URL; ?>login/auth" method="post">
        <label for="reg_number"></label>
        <input type="text" name="reg_number" id="reg_number" required placeholder="Registration number" class="form-control sensitive_info">
