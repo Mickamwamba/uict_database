@@ -25,14 +25,18 @@ $template = new Template();
             <meta charset="utf-8" />
             <title>UICT COMMUNITY</title>
 	          <?php
-	              $cssFiles = array("bootstrap.min.css","bootstrap-theme.css","style.css","main.css");
+	              $cssFiles = array("bootstrap.min.css","bootstrap-theme.css","style.css","main.css","font.css");
           	    foreach($cssFiles as $file){
+		     if(isset($_GET['url']) && substr_count($_GET['url'],"/") ==3){
           	       echo '<link rel="stylesheet" type="text/css" href="../../public/css/'.$file.'" />';	    
+		     }elseif(isset($_GET['url']) && substr_count($_GET['url'],"/") ==1){
+			echo '<link rel="stylesheet" type="text/css" href="./public/css/'.$file.'" />';
+		     }else{
+			echo '<link rel="stylesheet" type="text/css" href="../public/css/'.$file.'" />';	    
+		     }
                 }  
           	?>
-            <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine" />
-            <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Gafata" />
-           
+            
             
         </head>
         <body>
